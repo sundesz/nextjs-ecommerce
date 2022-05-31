@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  flower-db:
+    image: postgres
+    ports:
+      - 5432:5432
+    restart: always
+    container_name: flower-db
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: flower
+    volumes:
+      - pgdataflower:/var/lib/postgresql/data-flower
+
+volumes:
+  pgdataflower:

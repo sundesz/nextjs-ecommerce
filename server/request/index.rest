@@ -1,0 +1,10 @@
+POST http://localhost:3001/api/v1/logout
+
+###
+POST http://localhost:3001/api/v1/login
+Content-Type: application/json
+
+{
+  "username": "root",
+  "password": "admin"
+}
